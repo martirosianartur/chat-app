@@ -10,7 +10,18 @@
 .svn/
 migrate_working_dir/
 *.env
+*.key
+*.pem
+*.crt
+*.p12
+credentials.json
+Thumbs.db
+.directory
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# Sensitive files
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 lib/firebase_options.dart
@@ -18,17 +29,14 @@ Podfile.lock
 firebase.json
 android/app/build.gradle
 
-
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code related (optional)
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -39,6 +47,9 @@ android/app/build.gradle
 .pub-cache/
 .pub/
 /build/
+.packages
+flutter_export_environment.sh
+generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -50,12 +61,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-pubspec.lock
-pubspec.lock
-pubspec.lock
-android/app/build.gradle
+
 ios/Podfile
 ios/Runner.xcodeproj/project.pbxproj
 macos/Podfile
-pubspec.lock
-android/app/build.gradle
