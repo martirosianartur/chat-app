@@ -119,7 +119,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             ),
                             obscureText: !_isPasswordVisible,
                             validator: (value) {
-                              if (value == null || value.trim().length < 12) {
+                              if (value == null || value.trim().length < 4) {
                                 return 'Password must be at least 12 characters long.';
                               }
                               return null;
