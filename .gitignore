@@ -57,3 +57,5 @@ android/app/build.gradle
 ios/Podfile
 ios/Runner.xcodeproj/project.pbxproj
 macos/Podfile
+pubspec.lock
+android/app/build.gradle
