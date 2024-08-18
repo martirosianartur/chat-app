@@ -14,34 +14,6 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredEmail = '';
   var _enteredPassword = '';
 
-  Widget _buildPasswordField() {
-    return TextFormField(
-      decoration: InputDecoration(
-        labelText: 'Password',
-        suffixIcon: IconButton(
-          icon: Icon(
-            _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-          ),
-          onPressed: () {
-            setState(() {
-              _isPasswordVisible = !_isPasswordVisible;
-            });
-          },
-        ),
-      ),
-      obscureText: !_isPasswordVisible,
-      validator: (value) {
-        if (value == null || value.trim().length < 12) {
-          return 'Password must be at least 12 characters long.';
-        }
-        return null;
-      },
-      onSaved: (value) {
-        _enteredPassword = value!;
-      },
-    );
-  }
-
   void _submit() {
     final isValid = _form.currentState!.validate();
 
@@ -101,7 +73,33 @@ class _AuthScreenState extends State<AuthScreen> {
                               _enteredEmail = value!;
                             },
                           ),
-                          _buildPasswordField(),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              labelText: 'Password',
+                              suffixIcon: IconButton(
+                                icon: Icon(
+                                  _isPasswordVisible
+                                      ? Icons.visibility
+                                      : Icons.visibility_off,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _isPasswordVisible = !_isPasswordVisible;
+                                  });
+                                },
+                              ),
+                            ),
+                            obscureText: !_isPasswordVisible,
+                            validator: (value) {
+                              if (value == null || value.trim().length < 12) {
+                                return 'Password must be at least 12 characters long.';
+                              }
+                              return null;
+                            },
+                            onSaved: (value) {
+                              _enteredPassword = value!;
+                            },
+                          ),
                           const SizedBox(
                             height: 12,
                           ),
@@ -124,12 +122,6 @@ class _AuthScreenState extends State<AuthScreen> {
                                 ? 'Create an account'
                                 : 'I already have an account'),
                           )
-                          // TextFormField(
-                          //   decoration: const InputDecoration(
-                          //     labelText: 'Password',
-                          //   ),
-                          //   obscureText: true,
-                          // )
                         ],
                       ),
                     ),
