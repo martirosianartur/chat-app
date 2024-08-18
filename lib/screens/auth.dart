@@ -20,7 +20,7 @@ class _AuthScreenState extends State<AuthScreen> {
   void _submit() async {
     final isValid = _form.currentState!.validate();
 
-    if (isValid) {
+    if (!isValid) {
       return;
     }
     _form.currentState!.save();
