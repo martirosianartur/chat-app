@@ -67,3 +67,6 @@ ios/Runner.xcodeproj/project.pbxproj
 macos/Podfile
 ios/Runner/Info.plist
 ios/Runner/Runner.entitlements
+
+ios/Runner.xcodeproj/project.pbxproj
+ios/Runner/Info.plist
