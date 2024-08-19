@@ -70,3 +70,4 @@ ios/Runner/Runner.entitlements
 
 ios/Runner.xcodeproj/project.pbxproj
 ios/Runner/Info.plist
+pubspec.lock
